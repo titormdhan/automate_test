@@ -5,7 +5,7 @@ Library    SeleniumLibrary
 Resource    ../Variables/variables.robot
 
 *** Keywords ***    
-user membuka halaman web    
+user open halaman web    
     Open Browser    ${base_url}    ${browser}[Chrome]
     Maximize Browser Window
     Go To    ${login_url}[url_1]
