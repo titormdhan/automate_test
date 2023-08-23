@@ -6,7 +6,7 @@ Resource    ../Variables/variables.robot
 
 *** Keywords ***    
 
-user open halaman web    
+user membuka halaman web    
 
     Open Browser    ${base_url}    ${browser}[Chrome]
     Maximize Browser Window
