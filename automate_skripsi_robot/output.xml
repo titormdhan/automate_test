@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230822 17:25:14.377" rpa="false" schemaversion="4">
+<suite id="s1" name="Login" source="c:\Users\WGS-LAP204\Documents\automate_test\automate_skripsi_robot\Testcase\login.robot">
+<test id="s1-t1" name="SC01 User melakukan Login dengan data valid" line="9">
+<kw name="Given user membuka halaman web" library="login_sd">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${base_url}</arg>
+<arg>${browser}[Chrome]</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230822 17:25:15.275" level="INFO">Opening browser 'Chrome' to base url 'https://arowana.fazpas.com/'.</msg>
+<status status="PASS" starttime="20230822 17:25:15.275" endtime="20230822 17:25:19.496"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230822 17:25:19.497" endtime="20230822 17:25:19.657"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${login_url}[url_1]</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230822 17:25:19.657" level="INFO">Opening url 'https://arowana.fazpas.com/login'</msg>
+<status status="PASS" starttime="20230822 17:25:19.657" endtime="20230822 17:25:20.092"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230822 17:25:22.105" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230822 17:25:20.098" endtime="20230822 17:25:22.111"/>
+</kw>
+<status status="PASS" starttime="20230822 17:25:15.273" endtime="20230822 17:25:22.112"/>
+</kw>
+<kw name="When user input email" library="login_sd">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='Email']</arg>
+<arg>superadmin@fazpass.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230822 17:25:22.127" level="INFO">Typing text 'superadmin@fazpass.com' into text field '//input[@placeholder='Email']'.</msg>
+<status status="PASS" starttime="20230822 17:25:22.119" endtime="20230822 17:25:22.713"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230822 17:25:24.715" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230822 17:25:22.714" endtime="20230822 17:25:24.715"/>
+</kw>
+<status status="PASS" starttime="20230822 17:25:22.118" endtime="20230822 17:25:24.716"/>
+</kw>
+<kw name="And user input pin" library="login_sd">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='PIN']</arg>
+<arg>987654</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230822 17:25:24.726" level="INFO">Typing text '987654' into text field '//input[@placeholder='PIN']'.</msg>
+<status status="PASS" starttime="20230822 17:25:24.724" endtime="20230822 17:25:25.075"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230822 17:25:27.083" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230822 17:25:25.075" endtime="20230822 17:25:27.086"/>
+</kw>
+<status status="PASS" starttime="20230822 17:25:24.717" endtime="20230822 17:25:27.091"/>
+</kw>
+<kw name="And user klik button login" library="login_sd">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230822 17:25:27.115" level="INFO">Clicking button '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20230822 17:25:27.115" endtime="20230822 17:25:27.480"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230822 17:25:29.484" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230822 17:25:27.480" endtime="20230822 17:25:29.486"/>
+</kw>
+<status status="PASS" starttime="20230822 17:25:27.102" endtime="20230822 17:25:29.487"/>
+</kw>
+<kw name="Then masuk ke halaman dashboard" library="login_sd">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230822 17:25:34.515" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230822 17:25:29.504" endtime="20230822 17:25:34.516"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>css=.text-xl</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230822 17:25:34.738" level="INFO">Element 'css=.text-xl' is displayed.</msg>
+<status status="PASS" starttime="20230822 17:25:34.517" endtime="20230822 17:25:34.739"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230822 17:25:34.740" endtime="20230822 17:25:39.035"/>
+</kw>
+<status status="PASS" starttime="20230822 17:25:29.499" endtime="20230822 17:25:39.036"/>
+</kw>
+<status status="PASS" starttime="20230822 17:25:15.271" endtime="20230822 17:25:39.036"/>
+</test>
+<status status="PASS" starttime="20230822 17:25:14.394" endtime="20230822 17:25:39.070"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
