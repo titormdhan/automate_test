@@ -8,7 +8,7 @@ Resource    ../Variables/variables.robot
 
 user membuka halaman web    
 
-    Open Browser    ${base_url}    ${browser}[Chrome]
+    Open Browser    ${base_url}    ${browser}[Chrome]    #options=add_experimental_option("detach",True ) - Buat biar gk nutup browser
     Maximize Browser Window
     Go To    ${login_url}[url_1]
     Sleep    2s
@@ -25,7 +25,7 @@ masuk ke halaman dashboard
     Sleep    5s
     Element Should Be Visible    css=.text-xl
     #Capture Page Screenshot
-    Close Browser
+    #Close Browser
 
 #-----------------------------------------------------------------------------#
 # NOTES ;
